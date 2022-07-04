@@ -55,7 +55,7 @@ public class GunController : MonoBehaviour
         gunSoundEffect.Play("shoot");
 
         currentAmmo--;
-        Debug.Log(currentAmmo);
+        //Debug.Log(currentAmmo);
 
         RaycastHit hit;
         if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
@@ -77,7 +77,7 @@ public class GunController : MonoBehaviour
         animator.SetBool("Reloading", true);
 
         isReloading = true;
-        Debug.Log("Reloading...");
+        //Debug.Log("Reloading...");
         yield return new WaitForSeconds(reloadTime);
 
         animator.SetBool("Reloading", false);
