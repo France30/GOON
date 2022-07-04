@@ -16,7 +16,7 @@ public class GunController : MonoBehaviour
 
     private GunAudioController gunSoundEffect;
 
-    private float nextTimeToFire = 0f;
+    private float nextTimeToFire = 1f;
     private int currentAmmo;
     private bool isReloading = false;
    
