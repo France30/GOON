@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GunController : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class GunController : MonoBehaviour
     [SerializeField] private ParticleSystem muzzleFlash;
     [SerializeField] private Animator animator;
 
+    [SerializeField] private Text ammoCounter; //temporary till UI is implemented
+
     private GunAudioController gunSoundEffect;
 
     private float nextTimeToFire = 1f;
@@ -24,6 +27,7 @@ public class GunController : MonoBehaviour
     {
         gunSoundEffect = GetComponent<GunAudioController>();
         currentAmmo = maxAmmo;
+        ammoCounter.text = currentAmmo.ToString(); //temporary till UI is implemented
     }
 
     // Update is called once per frame
@@ -56,6 +60,7 @@ public class GunController : MonoBehaviour
 
         currentAmmo--;
         //Debug.Log(currentAmmo);
+        ammoCounter.text = currentAmmo.ToString(); //temporary till UI is implemented
 
         RaycastHit hit;
         if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
@@ -82,6 +87,7 @@ public class GunController : MonoBehaviour
 
         animator.SetBool("Reloading", false);
         currentAmmo = maxAmmo;
+        ammoCounter.text = currentAmmo.ToString(); //temporary till UI is implemented
         isReloading = false;
         Debug.Log(currentAmmo);
     }
