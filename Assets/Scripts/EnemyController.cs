@@ -11,6 +11,7 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        Move();
     }
 
     public void TakeDamage(float amount)
@@ -18,6 +19,11 @@ public class EnemyController : MonoBehaviour
         health -= amount;
         if (health <= 0f)
             OnDeath();
+    }
+
+    private void Move()
+    {
+        
     }
 
     private void OnDeath()
