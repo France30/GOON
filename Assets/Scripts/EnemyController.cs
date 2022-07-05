@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Script should assign different values to different enemies(ex. grunt -> tank, with tank taking 3 - 4 shots to kill)
 public class EnemyController : MonoBehaviour
 {
     [SerializeField] private float health = 1f;
