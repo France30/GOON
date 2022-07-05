@@ -70,6 +70,9 @@ public class GunController : MonoBehaviour
             if(enemy != null)
                 enemy.TakeDamage(damage);
         }
+
+        BulletLine bulletLine = GetComponent<BulletLine>();
+        bulletLine.SetPositions(new Vector3[] {muzzleFlash.transform.position, muzzleFlash.transform.position + fpsCam.transform.forward * range});
     }
 
     private IEnumerator Reload()
