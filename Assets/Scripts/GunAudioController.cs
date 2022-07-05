@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class GunAudioController : MonoBehaviour
 {
-
     [SerializeField] private AudioClip shootClip;
     [SerializeField] private AudioClip noAmmoClip;
     [SerializeField] private AudioClip reloadClip;
