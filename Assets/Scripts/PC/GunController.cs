@@ -13,7 +13,6 @@ public class GunController : MonoBehaviour
 
     [SerializeField] private Camera fpsCam;
     [SerializeField] private ParticleSystem muzzleFlash;
-    [SerializeField] private Animator animator;
 
     [SerializeField] private Text ammoCounter; //temporary till UI is implemented
 
@@ -78,6 +77,8 @@ public class GunController : MonoBehaviour
     private IEnumerator Reload()
     {
         gunSoundEffect.Play("reload");
+
+        Animator animator = GetComponent<Animator>();
         animator.SetBool("Reloading", true);
 
         isReloading = true;
