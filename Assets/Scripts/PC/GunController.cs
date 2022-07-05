@@ -14,7 +14,7 @@ public class GunController : MonoBehaviour
     [SerializeField] private Camera fpsCam;
     [SerializeField] private ParticleSystem muzzleFlash;
 
-    [SerializeField] private Text ammoCounter; //temporary till UI is implemented
+    [SerializeField] private Text ammoCounter;
 
     private GunAudioController gunSoundEffect;
 
@@ -26,7 +26,7 @@ public class GunController : MonoBehaviour
     {
         gunSoundEffect = GetComponent<GunAudioController>();
         currentAmmo = maxAmmo;
-        ammoCounter.text = currentAmmo.ToString(); //temporary till UI is implemented
+        ammoCounter.text = currentAmmo.ToString();
     }
 
     // Update is called once per frame
@@ -59,7 +59,7 @@ public class GunController : MonoBehaviour
 
         currentAmmo--;
         //Debug.Log(currentAmmo);
-        ammoCounter.text = currentAmmo.ToString(); //temporary till UI is implemented
+        ammoCounter.text = currentAmmo.ToString();
 
         RaycastHit hit;
         if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
@@ -87,7 +87,7 @@ public class GunController : MonoBehaviour
 
         animator.SetBool("Reloading", false);
         currentAmmo = maxAmmo;
-        ammoCounter.text = currentAmmo.ToString(); //temporary till UI is implemented
+        ammoCounter.text = currentAmmo.ToString();
         isReloading = false;
         Debug.Log(currentAmmo);
     }
