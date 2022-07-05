@@ -69,8 +69,6 @@ public class GunController : MonoBehaviour
             EnemyController enemy = hit.transform.GetComponent<EnemyController>();
             if(enemy != null)
                 enemy.TakeDamage(damage);
-
-            //Add impact force?
         }
     }
 
