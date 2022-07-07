@@ -27,7 +27,11 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (isPaused || isAtDestination) return;
+        if (isPaused) return;
+
+        LookAtTarget();
+
+        if (isAtDestination) return;
 
         if (enemyAgent.remainingDistance <= enemyAgent.stoppingDistance)
         {
@@ -64,6 +68,12 @@ public class EnemyController : MonoBehaviour
     public void OnDeath()
     {
         ObjectPoolManager.Instance.DespawnGameObject(gameObject);
+    }
+
+    private void LookAtTarget()
+    {
+        Vector3 targetPosition = new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z);
+        transform.LookAt(targetPosition);
     }
 
     private void Attack()
