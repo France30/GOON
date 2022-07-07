@@ -97,6 +97,6 @@ public class GunController : MonoBehaviour
         currentAmmo = maxAmmo;
         ammoCounter.text = currentAmmo.ToString();
         isReloading = false;
-        Debug.Log(currentAmmo);
+        //Debug.Log(currentAmmo);
     }
 }
