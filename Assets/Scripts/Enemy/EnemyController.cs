@@ -14,7 +14,7 @@ public class EnemyController : MonoBehaviour
 
     private bool isPaused = false, isAtDestination = false;
 
-    private void Awake()
+    private void OnEnable()
     {
         enemyAgent = GetComponent<NavMeshAgent>();
         enemyAgent.SetDestination(target.transform.position);
