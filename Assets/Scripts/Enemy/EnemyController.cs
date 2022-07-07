@@ -54,8 +54,8 @@ public class EnemyController : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        health -= amount;
-        if (health > 0)
+        currentHealth -= amount;
+        if (currentHealth > 0)
             animationController.Play("Hit");
         else
             animationController.Play("Death");
