@@ -10,12 +10,13 @@ public class EnemySpawner : Singleton<EnemySpawner>
 
     [SerializeField] private int minEnemyCount = 1, maxEnemyCount = 5;
 
+    [SerializeField] private float startWaveTime;
     [SerializeField] private float spawnTime;
 
     private void Start()
     {
         //CheckSpawnPoints();
-        InvokeRepeating("SpawnEnemies", 0, spawnTime);
+        InvokeRepeating("SpawnEnemies", startWaveTime, spawnTime);
     }
    
     /*public void CheckSpawnPoints()
