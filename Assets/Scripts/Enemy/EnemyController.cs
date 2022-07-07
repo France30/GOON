@@ -63,8 +63,7 @@ public class EnemyController : MonoBehaviour
 
     public void OnDeath()
     {
-        //temporary, replace with Singleton method
-        Destroy(gameObject);
+        ObjectPoolManager.Instance.DespawnGameObject(gameObject);
     }
 
     private void Attack()
