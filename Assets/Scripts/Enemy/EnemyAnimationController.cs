@@ -9,6 +9,10 @@ public class EnemyAnimationController : MonoBehaviour
     private void OnEnable()
     {
         animator = GetComponent<Animator>();
+
+        animator.ResetTrigger("Attack");
+        animator.ResetTrigger("Hit");
+        animator.ResetTrigger("Death");
     }
 
     public void Play(string state)
