@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour
 {
-    [SerializeField] private float health = 1f;
+    [SerializeField] private float maxHealth = 1f;
     [SerializeField] private GameObject target;
 
     private NavMeshAgent enemyAgent;
