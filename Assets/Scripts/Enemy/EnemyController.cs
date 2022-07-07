@@ -7,7 +7,7 @@ public class EnemyController : MonoBehaviour
 {
     [SerializeField] private float health = 1f;
     [SerializeField] private GameObject target;
-    
+
     private NavMeshAgent enemyAgent;
 
     private EnemyAnimationController animationController;
@@ -18,7 +18,6 @@ public class EnemyController : MonoBehaviour
     {
         enemyAgent = GetComponent<NavMeshAgent>();
         enemyAgent.SetDestination(target.transform.position);
-
         animationController = GetComponent<EnemyAnimationController>();
     }
 
