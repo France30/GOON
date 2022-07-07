@@ -6,8 +6,7 @@ public class EnemyAnimationController : MonoBehaviour
 {
     private Animator animator;
 
-    // Start is called before the first frame update
-    private void Awake()
+    private void OnEnable()
     {
         animator = GetComponent<Animator>();
     }
