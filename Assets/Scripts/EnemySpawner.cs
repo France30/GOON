@@ -34,17 +34,24 @@ public class EnemySpawner : Singleton<EnemySpawner>
     private void SpawnEnemies()
     {
         Transform parent = GetRandomSpawnPoint();
-        //Use the object pool manager to get an enemy from the list
-        GameObject pooledEnemy = ObjectPoolManager.Instance.GetPooledObject(GetRandomEnemyID());
-        Debug.Log(pooledEnemy);
-        //Check first if we received a valid gameobject from the pool
-        if (pooledEnemy != null)
+        int enemyCount = Random.Range(minEnemyCount, maxEnemyCount);
+        //Debug.Log("spawning " + enemyCount + " in the " + parent.name);
+
+        for (int i = 0; i < enemyCount; i++)
         {
-            pooledEnemy.transform.parent = parent;
-            pooledEnemy.transform.localPosition = Vector3.zero;
-            //Activate it to use the object
-            pooledEnemy.SetActive(true);
-        }     
+            //Use the object pool manager to get an enemy from the list
+            GameObject pooledEnemy = ObjectPoolManager.Instance.GetPooledObject(GetRandomEnemyID());
+            //Debug.Log(pooledEnemy);
+            //Check first if we received a valid gameobject from the pool
+            if (pooledEnemy != null)
+            {
+                pooledEnemy.transform.parent = parent;
+                pooledEnemy.transform.localPosition = Vector3.zero;
+                //Activate it to use the object
+                pooledEnemy.SetActive(true);
+            }
+
+        }
     }
 
     private Transform GetRandomSpawnPoint()
