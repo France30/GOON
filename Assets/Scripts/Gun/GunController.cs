@@ -76,7 +76,10 @@ public class GunController : MonoBehaviour
         }
 
         BulletLine bulletLine = GetComponent<BulletLine>();
-        bulletLine.SetPositions(new Vector3[] {muzzleFlash.transform.position, muzzleFlash.transform.position + fpsCam.transform.forward * range});
+
+        //PC bullet line
+        bulletLine.SetPositions(new Vector3[] { muzzleFlash.transform.position, hasHit ? hit.point : 
+            muzzleFlash.transform.position + fpsCam.transform.forward * range });
     }
 
     private IEnumerator Reload()
