@@ -8,7 +8,7 @@ public class EnemySpawner : Singleton<EnemySpawner>
     [SerializeField] private List<string> enemies;
     [SerializeField] private List<Transform> spawnPoints;
 
-    //[SerializeField] private int minEnemyCount = 1, maxEnemyCount = 5;
+    [SerializeField] private int minEnemyCount = 1, maxEnemyCount = 5;
 
     [SerializeField] private float spawnTime;
 
