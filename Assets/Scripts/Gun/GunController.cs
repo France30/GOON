@@ -62,13 +62,17 @@ public class GunController : MonoBehaviour
         ammoCounter.text = currentAmmo.ToString();
 
         RaycastHit hit;
-        if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
+        bool hasHit = Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range);
+        if (hasHit)
         {
             //Debug.Log(hit.transform.name);
 
             EnemyController enemy = hit.transform.GetComponent<EnemyController>();
-            if(enemy != null)
+            if (enemy != null)
+            {
+                //Debug.Log("enemy hit!");
                 enemy.TakeDamage(damage);
+            }
         }
 
         BulletLine bulletLine = GetComponent<BulletLine>();
