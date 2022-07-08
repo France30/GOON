@@ -13,10 +13,13 @@ public class EnemySpawner : Singleton<EnemySpawner>
     [SerializeField] private float startWaveTime;
     [SerializeField] private float spawnTime;
 
+    private IndicatorScript indicator;
+
     private void Start()
     {
         //CheckSpawnPoints();
         InvokeRepeating("SpawnEnemies", startWaveTime, spawnTime);
+        indicator = GetComponent<IndicatorScript>();
     }
    
     /*public void CheckSpawnPoints()
@@ -36,6 +39,7 @@ public class EnemySpawner : Singleton<EnemySpawner>
         Transform parent = GetRandomSpawnPoint();
         int enemyCount = Random.Range(minEnemyCount, maxEnemyCount);
         //Debug.Log("spawning " + enemyCount + " in the " + parent.name);
+        indicator.Warning(parent.name);
 
         for (int i = 0; i < enemyCount; i++)
         {
