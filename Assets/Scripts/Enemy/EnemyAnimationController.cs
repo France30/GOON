@@ -7,8 +7,13 @@ public class EnemyAnimationController : MonoBehaviour
     private Animator animator;
 
     private void OnEnable()
+    private float maxSpeed;
+
+    private void Awake()
     {
         animator = GetComponent<Animator>();
+        maxSpeed = animator.speed;
+    }
 
         animator.ResetTrigger("Attack");
         animator.ResetTrigger("Hit");
