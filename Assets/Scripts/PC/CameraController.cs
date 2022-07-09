@@ -20,6 +20,8 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        bool gamePaused = GameController.Instance.IsGamePaused();
+        if (gamePaused) return;
         //look up and down is based on the x-axis rotation
         rotationX += Input.GetAxis("Mouse Y");
         //look left and right is based on the y-axis rotation
