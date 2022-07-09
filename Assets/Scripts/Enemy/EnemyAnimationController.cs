@@ -50,6 +50,8 @@ public class EnemyAnimationController : MonoBehaviour
 
         if (state == "Death")
             enemy.OnDeath();
+
+        animator.ResetTrigger(state);
     }
 
     private float GetCurrentAnimationLength()
