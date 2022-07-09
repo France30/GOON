@@ -51,8 +51,10 @@ public class EnemyController : MonoBehaviour
         }
         else
         {
+            bool gamePaused = GameController.Instance.IsGamePaused();
+            if (gamePaused) return;
+
             isPaused = false;
-    }
 
             if (currentHealth > 0)
                 enemyAgent.SetDestination(target.transform.position);
