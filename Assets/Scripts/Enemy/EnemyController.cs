@@ -29,11 +29,8 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (isPaused) return;
-
         LookAtTarget();
-
-        if (isAtDestination) return;
+        if (isPaused || isAtDestination) return;
 
         if (enemyAgent.remainingDistance <= enemyAgent.stoppingDistance)
         {
