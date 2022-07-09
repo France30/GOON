@@ -13,8 +13,8 @@ NavMeshProjectSettings:
     cost: 2
   - name: SideWalk
     cost: 2
-  - name: 
-    cost: 1
+  - name: Building
+    cost: 5
   - name: 
     cost: 1
   - name: 
