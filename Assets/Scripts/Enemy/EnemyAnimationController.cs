@@ -43,7 +43,6 @@ public class EnemyAnimationController : MonoBehaviour
     {
         EnemyController enemy = GetComponent<EnemyController>();
         enemy.TogglePause();
-        //Debug.Log(GetCurrentAnimationLength());
 
         yield return new WaitForSeconds(GetCurrentAnimationLength());
 
