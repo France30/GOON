@@ -32,7 +32,8 @@ public class GunController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (isReloading) return;
+        bool gamePaused = GameController.Instance.IsGamePaused();
+        if (isReloading || gamePaused) return;
 
         if(Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire)
         {
