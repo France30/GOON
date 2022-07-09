@@ -12,12 +12,14 @@ public class EnemyController : MonoBehaviour
 
     private EnemyAnimationController animationController;
 
-    private bool isPaused = false, isAtDestination = false;
+    private bool isPaused, isAtDestination;
     private float currentHealth;
 
     private void OnEnable()
     {
         currentHealth = maxHealth;
+        isPaused = false;
+        isAtDestination = false;
 
         enemyAgent = GetComponent<NavMeshAgent>();
         enemyAgent.SetDestination(target.transform.position);
