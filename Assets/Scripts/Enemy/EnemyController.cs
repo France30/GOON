@@ -89,7 +89,6 @@ public class EnemyController : MonoBehaviour
         isAtDestination = true;
     }
 
-    
     private void SetRigidbodyIsKinematic(bool state)
     {
         Rigidbody rigidbody = GetComponent<Rigidbody>();
