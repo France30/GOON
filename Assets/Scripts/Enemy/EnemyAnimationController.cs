@@ -23,6 +23,14 @@ public class EnemyAnimationController : MonoBehaviour
         animator.ResetTrigger("Death");
     }
 
+    public void TogglePause()
+    {
+        if (animator.speed > 0)
+            animator.speed = 0;
+        else
+            animator.speed = maxSpeed;
+    }
+
     public void Play(string state)
     {
         animator.SetTrigger(state);
