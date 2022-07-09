@@ -80,7 +80,6 @@ public class EnemyController : MonoBehaviour
     {
         animationController.Play("Attack");
         isAtDestination = true;
-        //enemyAgent.ResetPath();
     }
 
     

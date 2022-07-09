@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemySpawner : Singleton<EnemySpawner>
 {
-    //[SerializeField] private List<GameObject> enemyPrefabs;
     [SerializeField] private List<string> enemies;
     [SerializeField] private List<Transform> spawnPoints;
 
@@ -17,22 +16,10 @@ public class EnemySpawner : Singleton<EnemySpawner>
 
     private void Start()
     {
-        //CheckSpawnPoints();
         InvokeRepeating("SpawnEnemies", startWaveTime, spawnTime);
         indicator = GetComponent<IndicatorScript>();
     }
-   
-    /*public void CheckSpawnPoints()
     {
-        //Check each spawnpoints. If there are no enemies in that spawn point, spawn more enemies
-        foreach(Transform t in spawnPoints)
-        {
-            if(t.childCount == 0)
-            {
-                SpawnEnemies(t);
-            }
-        }
-    }*/
 
     private void SpawnEnemies()
     {
@@ -67,10 +54,4 @@ public class EnemySpawner : Singleton<EnemySpawner>
     {
         return enemies[Random.Range(0, enemies.Count)];
     }
-
-    /*
-    private GameObject GetRandomEnemyPrefab()
-    {
-        return enemyPrefabs[Random.Range(0, enemyPrefabs.Count)];
-    }*/
 }
