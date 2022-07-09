@@ -19,7 +19,14 @@ public class EnemySpawner : Singleton<EnemySpawner>
         InvokeRepeating("SpawnEnemies", startWaveTime, spawnTime);
         indicator = GetComponent<IndicatorScript>();
     }
+
+    public void TogglePause()
     {
+        if (GameController.Instance.IsGamePaused())
+            CancelInvoke();
+        else
+            InvokeRepeating("SpawnEnemies", startWaveTime, spawnTime);
+    }
 
     private void SpawnEnemies()
     {
