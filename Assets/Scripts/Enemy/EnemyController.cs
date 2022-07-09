@@ -45,17 +45,18 @@ public class EnemyController : MonoBehaviour
     public void TogglePause()
     {
         if (!isPaused)
+        {
             isPaused = true;
+            enemyAgent.ResetPath();   
+        }
         else
+        {
             isPaused = false;
     }
 
-    public void ToggleAgentPath()
-    {
-        if (enemyAgent.hasPath)
-            enemyAgent.ResetPath();
-        else
-            enemyAgent.SetDestination(target.transform.position);
+            if (currentHealth > 0)
+                enemyAgent.SetDestination(target.transform.position);
+        }
     }
 
     public void TakeDamage(float amount)

@@ -43,8 +43,6 @@ public class EnemyAnimationController : MonoBehaviour
     {
         EnemyController enemy = GetComponent<EnemyController>();
         enemy.TogglePause();
-        enemy.ToggleAgentPath();
-
         //Debug.Log(GetCurrentAnimationLength());
 
         yield return new WaitForSeconds(GetCurrentAnimationLength());
@@ -53,8 +51,6 @@ public class EnemyAnimationController : MonoBehaviour
 
         if (state == "Death")
             enemy.OnDeath();
-        else
-            enemy.ToggleAgentPath();
     }
 
     private float GetCurrentAnimationLength()
