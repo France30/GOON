@@ -21,6 +21,8 @@ public class EnemyController : MonoBehaviour
         isPaused = false;
         isAtDestination = false;
 
+        SetRigidbodyIsKinematic(false);
+
         enemyAgent = GetComponent<NavMeshAgent>();
         enemyAgent.SetDestination(target.transform.position);
         animationController = GetComponent<EnemyAnimationController>();
@@ -56,6 +58,9 @@ public class EnemyController : MonoBehaviour
             if (currentHealth > 0)
                 enemyAgent.SetDestination(target.transform.position);
         }
+
+        bool gameState = GameController.Instance.IsGamePaused();
+        SetRigidbodyIsKinematic(gameState);
     }
 
     public void TakeDamage(float amount)
@@ -85,4 +90,9 @@ public class EnemyController : MonoBehaviour
     }
 
     
+    private void SetRigidbodyIsKinematic(bool state)
+    {
+        Rigidbody rigidbody = GetComponent<Rigidbody>();
+        rigidbody.isKinematic = state;
+    }
 }
