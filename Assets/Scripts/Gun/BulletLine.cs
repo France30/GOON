@@ -9,6 +9,11 @@ public class BulletLine : MonoBehaviour
     private float currentResetTime;
     private LineRenderer line;
 
+    public void SetPositions(Vector3[] positions)
+    {
+        line.SetPositions(positions);
+    }
+
     private void Awake()
     {
         line = gameObject.GetComponent<LineRenderer>();
@@ -20,11 +25,6 @@ public class BulletLine : MonoBehaviour
     {
         if(line.positionCount != 0)
             Reset();
-    }
-
-    public void SetPositions(Vector3[] positions)
-    {
-        line.SetPositions(positions);
     }
 
     private void Reset()

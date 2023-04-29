@@ -1073,6 +1073,62 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "GameControllerInput",
+            "id": "247c50dd-d487-4bfe-84c1-38def3d11bc6",
+            "actions": [
+                {
+                    "name": "ToggleGamePause",
+                    "type": "Button",
+                    "id": "11a20b45-f908-4076-8061-a42ca7e25941",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c0ad0055-a4f3-4595-a0a4-3c197e577ff3",
+                    "path": "<XRController>{RightHand}/thumbstickClicked",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleGamePause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "VRGunInput",
+            "id": "69da21aa-d377-44c5-b8af-dfd6555377e0",
+            "actions": [
+                {
+                    "name": "ShootGun",
+                    "type": "Button",
+                    "id": "aefaf6b3-19e9-4b5a-acdd-f4739679b324",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "709b3638-1048-4517-b761-c97ab769084b",
+                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ShootGun",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

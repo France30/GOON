@@ -1,92 +1,152 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour
 {
     [SerializeField] private float maxHealth = 1f;
+    [SerializeField] private int enemyScore = 1;
+    [SerializeField] private int damage = 1;
     [SerializeField] private GameObject target;
 
     private NavMeshAgent enemyAgent;
 
     private EnemyAnimationController animationController;
 
-    private bool isPaused, isAtDestination;
     private float currentHealth;
+    private float initialSpeed;
+    private int initialScore;
 
-    private void OnEnable()
-    {
-        currentHealth = maxHealth;
-        isPaused = false;
-        isAtDestination = false;
+    private bool isAgentResetting = false;
 
-        SetRigidbodyIsKinematic(false);
-
-        enemyAgent = GetComponent<NavMeshAgent>();
-        enemyAgent.SetDestination(target.transform.position);
-        animationController = GetComponent<EnemyAnimationController>();
-    }
-
-    // Update is called once per frame
-    private void Update()
-    {
-        LookAtTarget();
-        if (isPaused || isAtDestination) return;
-
-        if (enemyAgent.remainingDistance <= enemyAgent.stoppingDistance)
-        {
-            if (!enemyAgent.hasPath || enemyAgent.velocity.sqrMagnitude == 0f)
-                Attack();
-        }
-    }
+    public float Speed { get { return enemyAgent.speed; } set { enemyAgent.speed = value;} }
+    public int EnemyScore { get { return enemyScore;  } set { enemyScore = value;  } }
 
     public void TogglePause()
     {
-        if (!isPaused)
+        if (enemyAgent.hasPath)
         {
-            isPaused = true;
-            enemyAgent.ResetPath();   
+            enemyAgent.ResetPath();
+
+            //disable physics during pause
+            if (GameController.Instance.IsGamePaused)
+                SetRigidbodyIsKinematic(true);
         }
         else
         {
-            bool gamePaused = GameController.Instance.IsGamePaused();
+            bool gamePaused = GameController.Instance.IsGamePaused;
             if (gamePaused) return;
-
-            isPaused = false;
 
             if (currentHealth > 0)
                 enemyAgent.SetDestination(target.transform.position);
         }
-
-        bool gameState = GameController.Instance.IsGamePaused();
-        SetRigidbodyIsKinematic(gameState);
     }
 
     public void TakeDamage(float amount)
     {
         currentHealth -= amount;
         if (currentHealth > 0)
+        {
             animationController.Play("Hit");
+            //enable physics when shot
+            SetRigidbodyIsKinematic(false);
+        }
         else
             animationController.Play("Death");
     }
 
+    public void Attack()
+    {
+        GameController.Instance.Player.TakeDamage(damage);
+    }
+
     public void OnDeath()
     {
+        SetRigidbodyIsKinematic(true);
+        GameController.Instance.AddScore(enemyScore);
         ObjectPoolManager.Instance.DespawnGameObject(gameObject);
+    }
+
+    private void Awake()
+    {
+        animationController = GetComponent<EnemyAnimationController>();
+        enemyAgent = GetComponent<NavMeshAgent>();
+
+        initialSpeed = this.Speed;
+        initialScore = this.EnemyScore;
+    }
+
+    private void OnEnable()
+    {
+        bool isGameScene = GameController.Instance.IsGameScene;
+        if (!isGameScene) return;
+
+        currentHealth = maxHealth;
+        this.EnemyScore = initialScore;
+
+        SetRigidbodyIsKinematic(false);
+
+        if(!enemyAgent.enabled)
+            enemyAgent.enabled = true;
+
+        enemyAgent.SetDestination(target.transform.position);
+        this.Speed = initialSpeed;
+    }
+
+    // Update is called once per frame
+    private void Update()
+    {
+        LookAtTarget();
+        if (!enemyAgent.hasPath) return;
+
+        if (enemyAgent.remainingDistance > enemyAgent.stoppingDistance)
+        {
+            //reset path for better movement
+            if (!isAgentResetting)
+            {
+                StartCoroutine(ResetEnemy());
+            }
+
+            animationController.Play("Chase");
+            animationController.Stop("Attack");
+            return;
+        }
+
+        if (enemyAgent.remainingDistance <= enemyAgent.stoppingDistance)
+        {
+            //disable kinematic when destination has been reached
+            SetRigidbodyIsKinematic(false);
+
+            if (enemyAgent.velocity.sqrMagnitude <= 0.1f)
+            {
+                animationController.Play("Attack");
+            }
+        }
+    }
+
+    private IEnumerator ResetEnemy()
+    {        
+        if (GameController.Instance.IsGamePaused)
+            yield return null;
+
+        isAgentResetting = true;
+
+        enemyAgent.ResetPath();
+        enemyAgent.SetDestination(target.transform.position);
+
+        yield return new WaitForSeconds(0.5f);
+
+        SetRigidbodyIsKinematic(true);
+
+        isAgentResetting = false;
     }
 
     private void LookAtTarget()
     {
         Vector3 targetPosition = new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z);
         transform.LookAt(targetPosition);
-    }
-
-    private void Attack()
-    {
-        animationController.Play("Attack");
-        isAtDestination = true;
     }
 
     private void SetRigidbodyIsKinematic(bool state)

@@ -5,23 +5,9 @@ using UnityEngine;
 public class EnemyAnimationController : MonoBehaviour
 {
     private Animator animator;
+    private EnemyAudioController enemySoundEffect;
 
     private float maxSpeed;
-
-    private void Awake()
-    {
-        animator = GetComponent<Animator>();
-        maxSpeed = animator.speed;
-    }
-
-    private void OnEnable()
-    {
-        animator.speed = maxSpeed;
-
-        animator.ResetTrigger("Attack");
-        animator.ResetTrigger("Hit");
-        animator.ResetTrigger("Death");
-    }
 
     public void TogglePause()
     {
@@ -33,10 +19,39 @@ public class EnemyAnimationController : MonoBehaviour
 
     public void Play(string state)
     {
-        animator.SetTrigger(state);
+        if (IsPlaying(state)) return;
+            animator.SetTrigger(state);
 
         if (state == "Hit" || state == "Death")
             StartCoroutine(WaitForAnimation(state));
+    }
+
+    public void Stop(string state)
+    {
+        animator.ResetTrigger(state);
+    }
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+        maxSpeed = animator.speed;
+
+        enemySoundEffect = GetComponent<EnemyAudioController>();
+    }
+
+    private void OnEnable()
+    {
+        animator.speed = maxSpeed;
+        Play("Chase");
+
+        Stop("Attack");
+        Stop("Hit");
+        Stop("Death");
+    }
+
+    private bool IsPlaying(string state)
+    {
+        return animator.GetCurrentAnimatorStateInfo(0).IsName(state);
     }
 
     private IEnumerator WaitForAnimation(string state)
@@ -44,14 +59,16 @@ public class EnemyAnimationController : MonoBehaviour
         EnemyController enemy = GetComponent<EnemyController>();
         enemy.TogglePause();
 
+        enemySoundEffect.Play(state);
+
         yield return new WaitForSeconds(GetCurrentAnimationLength());
 
         enemy.TogglePause();
 
         if (state == "Death")
             enemy.OnDeath();
-
-        animator.ResetTrigger(state);
+        else
+            enemySoundEffect.Play("Idle");
     }
 
     private float GetCurrentAnimationLength()

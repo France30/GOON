@@ -2,8 +2,8 @@
     "m_SelectedDeviceId": "1WMHH86DRC1237",
     "m_SelectedPackage": {
         "deviceId": "1WMHH86DRC1237",
-        "name": "com.DefaultCompany.xr_lesson_openxrgdv32",
-        "processId": 27449,
+        "name": "com.Group3.GOONFPS",
+        "processId": 15383,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -16,122 +16,176 @@
         },
         {
             "deviceId": "1WMHH86DRC1237",
-            "name": "com.DefaultCompany.xr_lesson_openxrgdv32",
-            "processId": 9154,
+            "name": "com.Group3.GOONFPS",
+            "processId": 8094,
             "exited": true
         },
         {
             "deviceId": "1WMHH86DRC1237",
-            "name": "com.DefaultCompany.xr_lesson_openxrgdv32",
-            "processId": 9888,
+            "name": "com.Group3.GOONFPS",
+            "processId": 8671,
             "exited": true
         },
         {
             "deviceId": "1WMHH86DRC1237",
-            "name": "com.DefaultCompany.xr_lesson_openxrgdv32",
-            "processId": 11080,
+            "name": "com.Group3.GOONFPS",
+            "processId": 9200,
+            "exited": true
+        },
+        {
+            "deviceId": "1WMHH86DRC1237",
+            "name": "com.Group3.GOONFPS",
+            "processId": 9756,
+            "exited": true
+        },
+        {
+            "deviceId": "1WMHH86DRC1237",
+            "name": "com.Group3.GOONFPS",
+            "processId": 10235,
             "exited": true
         },
         {
             "deviceId": "1WMHH86DRC1237",
             "name": "com.oculus.shellenv",
-            "processId": 2108,
+            "processId": 2079,
             "exited": false
         },
         {
             "deviceId": "1WMHH86DRC1237",
-            "name": "com.DefaultCompany.xr_lesson_openxrgdv32",
-            "processId": 12124,
+            "name": "com.Group3.GOONFPS",
+            "processId": 11874,
             "exited": false
         },
         {
             "deviceId": "1WMHH86DRC1237",
-            "name": "com.DefaultCompany.xr_lesson_openxrgdv32",
-            "processId": 13588,
+            "name": "com.Group3.GOONFPS",
+            "processId": 12574,
             "exited": false
         },
         {
             "deviceId": "1WMHH86DRC1237",
-            "name": "com.DefaultCompany.xr_lesson_openxrgdv32",
-            "processId": 14942,
+            "name": "com.Group3.GOONFPS",
+            "processId": 13191,
             "exited": false
         },
         {
             "deviceId": "1WMHH86DRC1237",
-            "name": "com.DefaultCompany.xr_lesson_openxrgdv32",
-            "processId": 4776,
+            "name": "com.Group3.GOONFPS",
+            "processId": 13907,
             "exited": false
         },
         {
             "deviceId": "1WMHH86DRC1237",
-            "name": "com.DefaultCompany.xr_lesson_openxrgdv32",
-            "processId": 4457,
+            "name": "com.Group3.GOONFPS",
+            "processId": 14399,
             "exited": false
         },
         {
             "deviceId": "1WMHH86DRC1237",
-            "name": "com.DefaultCompany.xr_lesson_openxrgdv32",
-            "processId": 5750,
+            "name": "com.Group3.GOONFPS",
+            "processId": 15313,
             "exited": false
         },
         {
             "deviceId": "1WMHH86DRC1237",
-            "name": "com.DefaultCompany.xr_lesson_openxrgdv32",
-            "processId": 5195,
+            "name": "com.Group3.GOONFPS",
+            "processId": 16029,
             "exited": false
         },
         {
             "deviceId": "1WMHH86DRC1237",
-            "name": "com.DefaultCompany.xr_lesson_openxrgdv32",
-            "processId": 7332,
+            "name": "com.Group3.GOONFPS",
+            "processId": 17006,
             "exited": false
         },
         {
             "deviceId": "1WMHH86DRC1237",
-            "name": "com.DefaultCompany.xr_lesson_openxrgdv32",
-            "processId": 8818,
+            "name": "com.Group3.GOONFPS",
+            "processId": 17654,
             "exited": false
         },
         {
             "deviceId": "1WMHH86DRC1237",
-            "name": "com.DefaultCompany.xr_lesson_openxrgdv32",
-            "processId": 9460,
+            "name": "com.Group3.GOONFPS",
+            "processId": 18288,
             "exited": false
         },
         {
             "deviceId": "1WMHH86DRC1237",
-            "name": "com.DefaultCompany.xr_lesson_openxrgdv32",
-            "processId": 11611,
+            "name": "com.Group3.GOONFPS",
+            "processId": 6911,
             "exited": false
         },
         {
             "deviceId": "1WMHH86DRC1237",
-            "name": "com.DefaultCompany.xr_lesson_openxrgdv32",
-            "processId": 14890,
+            "name": "com.Group3.GOONFPS",
+            "processId": 7559,
             "exited": false
         },
         {
             "deviceId": "1WMHH86DRC1237",
-            "name": "com.DefaultCompany.xr_lesson_openxrgdv32",
-            "processId": 19564,
+            "name": "com.Group3.GOONFPS",
+            "processId": 20831,
             "exited": false
         },
         {
             "deviceId": "1WMHH86DRC1237",
-            "name": "com.DefaultCompany.xr_lesson_openxrgdv32",
-            "processId": 24459,
+            "name": "com.Group3.GOONFPS",
+            "processId": 22458,
             "exited": false
         },
         {
             "deviceId": "1WMHH86DRC1237",
-            "name": "com.DefaultCompany.xr_lesson_openxrgdv32",
-            "processId": 25549,
+            "name": "com.Group3.GOONFPS",
+            "processId": 26672,
             "exited": false
         },
         {
             "deviceId": "1WMHH86DRC1237",
-            "name": "com.DefaultCompany.xr_lesson_openxrgdv32",
-            "processId": 27449,
+            "name": "com.Group3.GOONFPS",
+            "processId": 28445,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHH86DRC1237",
+            "name": "com.Group3.GOONFPS",
+            "processId": 29466,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHH86DRC1237",
+            "name": "com.Group3.GOONFPS",
+            "processId": 30947,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHH86DRC1237",
+            "name": "com.Group3.GOONFPS",
+            "processId": 10024,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHH86DRC1237",
+            "name": "com.Group3.GOONFPS",
+            "processId": 11502,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHH86DRC1237",
+            "name": "com.Group3.GOONFPS",
+            "processId": 12380,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHH86DRC1237",
+            "name": "com.Group3.GOONFPS",
+            "processId": 14937,
+            "exited": false
+        },
+        {
+            "deviceId": "1WMHH86DRC1237",
+            "name": "com.Group3.GOONFPS",
+            "processId": 15383,
             "exited": false
         }
     ],

@@ -12,10 +12,10 @@ TagManager:
   - Enemy
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - UI_interactable
+  - VRGun
+  - Environment
+  - Lighting
   - 
   - 
   - 

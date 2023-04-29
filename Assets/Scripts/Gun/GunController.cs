@@ -1,20 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class GunController : MonoBehaviour
 {
     [SerializeField] private float damage = 1f;
     [SerializeField] private float range = 100f;
-    [SerializeField] private float fireRate = 3f;
-    [SerializeField] private int maxAmmo = 10;
-    [SerializeField] private float reloadTime = 3f;
+    [SerializeField] private float fireRate = 20f;
+    [SerializeField] private int maxAmmo = 15;
+    [SerializeField] private float reloadTime = 1.8f;
+    [SerializeField] private float impactForce = 600f;
 
     [SerializeField] private Camera fpsCam;
     [SerializeField] private ParticleSystem muzzleFlash;
 
-    [SerializeField] private Text ammoCounter;
+    [SerializeField] private TextMeshProUGUI ammoCounter;
 
     private GunAudioController gunSoundEffect;
 
@@ -32,7 +33,7 @@ public class GunController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        bool gamePaused = GameController.Instance.IsGamePaused();
+        bool gamePaused = GameController.Instance.IsGamePaused;
         if (isReloading || gamePaused) return;
 
         if(Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire)
@@ -71,8 +72,10 @@ public class GunController : MonoBehaviour
             EnemyController enemy = hit.transform.GetComponent<EnemyController>();
             if (enemy != null)
             {
-                //Debug.Log("enemy hit!");
                 enemy.TakeDamage(damage);
+
+                if (hit.rigidbody != null)
+                    hit.rigidbody.AddForce(-hit.normal * impactForce);
             }
         }
 
@@ -95,9 +98,13 @@ public class GunController : MonoBehaviour
         yield return new WaitForSeconds(reloadTime);
 
         animator.SetBool("Reloading", false);
-        currentAmmo = maxAmmo;
-        ammoCounter.text = currentAmmo.ToString();
         isReloading = false;
-        //Debug.Log(currentAmmo);
+
+        bool gamePaused = GameController.Instance.IsGamePaused;
+        if (!gamePaused)
+        {
+            currentAmmo = maxAmmo;
+            ammoCounter.text = currentAmmo.ToString();           
+        }
     }
 }
