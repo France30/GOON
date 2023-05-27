@@ -28058,7 +28058,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies:
   - RobotKyle
-  - TheBoi
+  - CyberSoldier
   - Robot1
   spawnPoints:
   - {fileID: 2040859699}

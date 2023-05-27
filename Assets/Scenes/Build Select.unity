@@ -904,8 +904,8 @@ MonoBehaviour:
     parent: {fileID: 1344061275}
     amountToPool: 10
     shouldExpand: 0
-  - id: TheBoi
-    objectToPool: {fileID: 7465294887362724044, guid: 5358fd1db56fd5f4ebd3a9185f223155, type: 3}
+  - id: CyberSoldier
+    objectToPool: {fileID: 3713279460230758614, guid: eeb070bd1881c07468c2f987698899c1, type: 3}
     parent: {fileID: 1344061275}
     amountToPool: 5
     shouldExpand: 0
