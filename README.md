@@ -8,7 +8,11 @@ Your goal is to survive hordes of enemies of the Egon gang that come in waves as
 https://github.com/France30/GOON/assets/53886711/f75afc89-c630-4bec-bf4a-c3d073b4e1bf
 
 ### VR Gameplay
-<b>TO FOLLOW</B>
+
+
+https://github.com/France30/GOON/assets/53886711/1798f29a-51d7-430c-a548-167fca91b504
+
+
 
 ## Controls
 ### VR Mode:
