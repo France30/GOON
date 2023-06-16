@@ -1,12 +1,14 @@
 # GOON
-GOON is an FPS game where you play a lone stranded crew member of the 10th Millimeter Gang deep inside enemy territory in a near-future dystopia, ravaged by economic crisis and social discourse with an overdrawn war abroad, causing instability. Your goal is to survive hordes of enemies of the Egon gang that come in waves as you fight for survival. Will you be able to survive until backup arrives or will you be a story to your brothers?
+<b>GOON</b> is an FPS game where you play a lone stranded crew member of the 10th Millimeter Gang deep inside enemy territory in a near-future dystopia, ravaged by economic crisis and social discourse with an overdrawn war abroad, causing instability. 
+
+Your goal is to survive hordes of enemies of the Egon gang that come in waves as you fight for survival. Will you be able to survive until backup arrives or will you be a story to your brothers?
 
 ## GAMEPLAY
 ### PC Standalone
-https://github.com/France30/GOON/assets/53886711/bb3e63b5-3bec-4635-8c72-54bac59525a7
+https://github.com/France30/GOON/assets/53886711/f75afc89-c630-4bec-bf4a-c3d073b4e1bf
 
 ### VR Gameplay
-[Insert VR Gameplay Here]
+<b>TO FOLLOW</B>
 
 ## How To Play
 ### VR Mode:
@@ -21,4 +23,5 @@ https://github.com/France30/GOON/assets/53886711/bb3e63b5-3bec-4635-8c72-54bac59
 	P = Pause
 
 ## Download Links
-[Insert Download Links Here]
+<b>VR apk: </b>https://drive.google.com/file/d/12FkA7MnDNtYlznxcG5U0_2LbHK_grCDs/view?usp=sharing<br>
+<b>PC Standalone: </b>https://drive.google.com/file/d/1whaYgaGtNjRJp73toqH7dwSZbCmgLUi0/view?usp=sharing
