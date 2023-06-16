@@ -10,7 +10,7 @@ https://github.com/France30/GOON/assets/53886711/f75afc89-c630-4bec-bf4a-c3d073b
 ### VR Gameplay
 <b>TO FOLLOW</B>
 
-## How To Play
+## Controls
 ### VR Mode:
 	Trigger = Shoot/Select
 	Tilt Controller Up/Down = Reload
