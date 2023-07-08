@@ -4,7 +4,7 @@
 Your goal is to survive hordes of enemies of the Egon gang that come in waves as you fight for survival. Will you be able to survive until backup arrives or will you be a story to your brothers?
 <br/><br/><br/>
 <b>Credits:</b><br/>
-Game Design & Programming by me. <br/>
+Game Design & Programming by me <br/>
 UI Assets, Level Design, & Post-processing by https://www.artstation.com/zenevergreen
 
 ## GAMEPLAY
