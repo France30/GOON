@@ -5,7 +5,7 @@ Your goal is to survive hordes of enemies of the Egon gang that come in waves as
 <br/><br/><br/>
 <b>Credits:</b><br/>
 Game Design & Programming by me. <br/>
-UI Assets, Level Design, & Post-processing by: https://www.artstation.com/zenevergreen.
+UI Assets, Level Design, & Post-processing by https://www.artstation.com/zenevergreen
 
 ## GAMEPLAY
 ### PC Standalone
