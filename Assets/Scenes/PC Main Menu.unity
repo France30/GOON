@@ -1133,7 +1133,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 59542067}
   m_HandleRect: {fileID: 59542066}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -2577,7 +2577,7 @@ MonoBehaviour:
     amountToPool: 10
     shouldExpand: 0
   - id: CyberSoldier
-    objectToPool: {fileID: 1225377132908595593, guid: ec6f42a0d31b81d45baa5052fbb4590a, type: 3}
+    objectToPool: {fileID: 3713279460230758614, guid: eeb070bd1881c07468c2f987698899c1, type: 3}
     parent: {fileID: 1340853818}
     amountToPool: 5
     shouldExpand: 0
