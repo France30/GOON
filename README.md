@@ -20,6 +20,7 @@ https://github.com/France30/GOON/assets/53886711/1798f29a-51d7-430c-a548-167fca9
 
 ## Controls
 ### VR Mode:
+	(Right Controller Only)
 	Trigger = Shoot/Select
 	Tilt Controller Up/Down = Reload
 	Thumbstick Press = Pause
