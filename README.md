@@ -32,5 +32,5 @@ https://github.com/France30/GOON/assets/53886711/1798f29a-51d7-430c-a548-167fca9
 	P = Pause
 
 ## Download Links
-<b>VR apk: </b>https://drive.google.com/file/d/12FkA7MnDNtYlznxcG5U0_2LbHK_grCDs/view?usp=sharing<br>
-<b>PC Standalone: </b>https://drive.google.com/file/d/1whaYgaGtNjRJp73toqH7dwSZbCmgLUi0/view?usp=sharing
+<b>VR apk: </b>https://drive.google.com/file/d/1LrKXY7WYxVRUh5S54JLdZyJA7aXIOjbt/view?usp=sharing<br>
+<b>PC Standalone: </b>https://drive.google.com/file/d/1eYWN36t1DB2TvSkuevFiGY6i1W_ga-_V/view?usp=sharing
